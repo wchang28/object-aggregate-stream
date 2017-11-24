@@ -7,6 +7,10 @@
   "scripts": {
     "test": "node ./js/test.js"
   },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/wchang28/object-aggregate-stream.git"
+  },
   "author": "Wen chang",
   "license": "MIT",
   "dependencies": {
