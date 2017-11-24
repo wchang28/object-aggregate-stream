@@ -1,5 +1,6 @@
 import s2s = require("string-to-stream");
 import JSONStream = require('JSONStream');
+import {Transform} from "stream";
 import * as oas from "./";
 
 let o =
@@ -9,7 +10,7 @@ let o =
 	{ "name":"Fiat", "models":[ "500", "Panda" ] }
 ];
 
-let  js = JSONStream.parse('*');
+let js: Transform = JSONStream.parse('*');
 
 js.on("data", (chunk) => {
 	//console.log(JSON.stringify(chunk));
