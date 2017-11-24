@@ -1,0 +1,17 @@
+{
+  "name": "object-aggregate-stream",
+  "version": "1.0.0",
+  "description": "Object Aggregate Stream",
+  "main": "./js/index.js",
+  "typings": "./js/index.d.ts",
+  "scripts": {
+    "test": "node ./js/test.js"
+  },
+  "author": "Wen chang",
+  "license": "MIT",
+  "dependencies": {
+    "@types/node": "^8.0.53",
+    "JSONStream": "^1.3.1",
+    "string-to-stream": "^1.1.0"
+  }
+}
