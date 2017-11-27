@@ -31,3 +31,17 @@ TransformStream.prototype.end = function(chunk, encoding, callback) {
 import * as stream from "stream";
 
 export function aggregate(n?: number) : stream.Transform {return new TransformStream(n);}
+
+class UnAggregateStream extends stream.Transform {
+	constructor() {
+		super({objectMode: true});
+	}
+	_transform(chunk: any, encoding: string, callback: Function) {
+		let ar: any[] = chunk;
+		for (let i in ar)
+			this.push(ar[i]);
+		callback();
+	}
+}
+
+export function un_aggregate() : stream.Transform {return new UnAggregateStream();}
